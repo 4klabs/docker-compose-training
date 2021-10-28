@@ -1,0 +1,10 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "amqplib": "^0.8.0",
+    "express": "^4.17.1"
+  }
+}

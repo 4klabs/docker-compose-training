@@ -1,0 +1,9 @@
+{
+  "name": "emails",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "amqplib": "^0.8.0"
+  }
+}
