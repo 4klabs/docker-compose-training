@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  api:
+    image: dosg-docker-compose-api:latest
+
+  backup:
+    image: dosg-docker-compose-backup:latest
+
+  email:
+    image: dosg-docker-compose-email:latest
+
