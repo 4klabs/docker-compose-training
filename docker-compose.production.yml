@@ -2,11 +2,11 @@ version: '3.9'
 
 services:
   api:
-    image: dosg-docker-compose-api:latest
+    image: mateus4k/docker-compose-training-api:latest
 
   backup:
-    image: dosg-docker-compose-backup:latest
+    image: mateus4k/docker-compose-training-backup:latest
 
   email:
-    image: dosg-docker-compose-email:latest
+    image: mateus4k/docker-compose-training-email:latest
 
