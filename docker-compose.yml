@@ -3,30 +3,47 @@ version: '3.9'
 services:
   api:
     build: ./api
+    command: ["sh", "wait.sh", "node", "index.js"]
     environment:
       RABBITMQ_URL: amqp://rabbitmq:5672
     ports:
       - 3000:3000
+    volumes:
+      - ./wait-for-rabbitmq.sh:/app/wait.sh
     restart: always
     depends_on:
       - rabbitmq
-      - backup
-      # - emails
+
   backup:
     build: ./backup
+    command: ["sh", "wait.sh", "node", "index.js"]
     environment:
       RABBITMQ_URL: amqp://rabbitmq:5672
-    ports:
-      - 3001:3000
     volumes:
       - ./backup/files:/app/files
+      - ./wait-for-rabbitmq.sh:/app/wait.sh
     restart: always
     depends_on:
       - rabbitmq
+
+  email:
+    build: ./email
+    command: ["sh", "wait.sh", "node", "index.js"]
+    environment:
+      RABBITMQ_URL: amqp://rabbitmq:5672
+    restart: always
+    volumes:
+      - ./wait-for-rabbitmq.sh:/app/wait.sh
+    depends_on:
+      - rabbitmq
+
   rabbitmq:
     image: rabbitmq:3.9-management-alpine
     volumes:
       - ./rabbitmq/data/:/var/lib/rabbitmq/
+    environment:
+      RABBITMQ_LOGS: "-"
     ports:
       - 5672:5672
       - 15672:15672
+    restart: always

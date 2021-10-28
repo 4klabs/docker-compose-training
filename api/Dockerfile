@@ -1,4 +1,5 @@
 FROM node:17-alpine
+RUN apk add curl --no-cache
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
