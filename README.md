@@ -1,14 +1,13 @@
-# Message Brokers Training
-
-This is code for a messaging training.
+# Docker Compose training
 
 ## Architecture
 
-![Architecture](https://user-images.githubusercontent.com/30202634/134742202-67ee343a-f900-47cb-bb6b-86233b44c962.jpg)
+API:
+![API](https://user-images.githubusercontent.com/30202634/139282396-4408d74e-45b7-4b29-af77-d5bf8b7123fc.jpg)![Mensageria - PFK (1)](https://user-images.githubusercontent.com/30202634/139282402-8e466484-5a34-41e6-b0ac-bf5757b3b107.jpg)
+
+![Queues](https://user-images.githubusercontent.com/30202634/139282407-8084abd5-c04b-4d79-bcd7-ebcf33f4502f.jpg)
 
 ## Usage
 ```bash
-node emails/index.js;
-node payment/index.js;
-node udemy/index.js;
+docker-compose up -d;
 ```
