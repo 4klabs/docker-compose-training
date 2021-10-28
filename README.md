@@ -12,8 +12,8 @@ docker-compose up -d;
 
 ### API:
 
-![API](https://user-images.githubusercontent.com/30202634/139282396-4408d74e-45b7-4b29-af77-d5bf8b7123fc.jpg)
+![API](https://user-images.githubusercontent.com/30202634/139295870-0ba77bdc-f9d5-41a0-ac61-7724ce47945e.jpg)
 
 ### Queues:
 
-![Queues](https://user-images.githubusercontent.com/30202634/139282407-8084abd5-c04b-4d79-bcd7-ebcf33f4502f.jpg)
+![Queues](https://user-images.githubusercontent.com/30202634/139295709-46917603-d666-47ed-98bc-36209178dd83.jpg)
