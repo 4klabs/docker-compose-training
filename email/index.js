@@ -14,6 +14,6 @@ const queue = 'send_mail';
     (message) => {
       console.log(`Email sent: ${message.content.toString()}`);
     },
-    { noAck: false }
+    { noAck: true }
   );
 })();
